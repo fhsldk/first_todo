@@ -1,3 +1,219 @@
+
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지가 화면을 꽉 채우도록 설정 */
+    z-index: -1; /* 다른 요소들이 이미지 위에 오도록 설정 */
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#clock {
+    font-size: 100px;
+    color: rgb(69, 168, 224);
+    margin-bottom: 20px; /* 시계 아래에 여백을 추가 */
+}
+
 .hidden{
-    display: none;
+    display: none !important;
+}
+
+#login-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+      
+#login-form input[type="text"] {
+
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    outline: none;
+}
+
+#login-form input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#login-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#greeting {
+    font-family: 'Arial', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 192, 203, 0.3); /* Light pink with opacity */
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+#greeting:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+/* To-do Form Styles */
+#todo-form {
+    margin-bottom: 20px;
+}
+
+#todo-form input {
+    width: 300px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#todo-form input:focus {
+    outline: none;
+    box-shadow: 0 2px 15px rgba(255, 192, 203, 0.4);
+    background-color: white;
+}
+
+/* To-do List Styles */
+#todo-list {
+    list-style-type: none;
+    padding: 0;
+    width: 300px;
+}
+
+#todo-list li {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+#todo-list li:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#todo-list li span {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+#todo-list li button {
+    background: none;
+    border: none;
+    color: #ff6b6b;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#todo-list li button:hover {
+    color: #ff4757;
+    transform: scale(1.2);
+}
+
+
+
+
+#weather {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 15px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease;
+}
+
+#weather:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+#weather span {
+    display: block;
+    text-align: center;
+}
+
+#weather span:first-child {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#weather span:last-child {
+    font-size: 14px;
+    color: #666;
+}
+
+
+
+#quote {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    animation: sparkle 1.5s infinite;
+}
+
+#quote-text {
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#quote-author {
+    display: block;
+    margin-top: 5px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+/* 반짝이는 애니메이션 효과 */
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 1;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        opacity: 0.5;
+        text-shadow: 0 0 2px rgba(255, 255, 255, 0.5), 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5);
+    }
 }

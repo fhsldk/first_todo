@@ -8,7 +8,7 @@ const bgImage = document.createElement("img");
 
 //bgImage의 소스 설정 = html에서 <img src = "img/0.jpg"/> 하는 걸 js에서 해줌
 bgImage.src = `img/${chosenImage}`;
+bgImage.classList.add("bg-image");
 
 //html에 body 추가
-
 document.body.appendChild(bgImage);

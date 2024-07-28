@@ -1,5 +1,5 @@
 const loginForm = document.querySelector("#login-form");
-const loginInput = document.querySelector("#login-form input");
+const loginInput = document.querySelector("#login-form input[type='text']");
 const greeting=document.querySelector("#greeting");
 
 //반복되는 string들은 대문자 변수로 저장하는 게 좋음
@@ -26,7 +26,7 @@ function onLoginSubmit(event){
 //greeting.classList.remove(HIDDEN_CLASSNAME); 중복되니까 username을 인자로 받는 함수 만들기
 function paintGreetings(username){
     //greeting에 텍스트 `hello $(username) 추가
-    greeting.innerText=`hello ${username}`;
+    greeting.innerText=`Hello ${username}!`;
     //greeting에 다시 보이게 하기
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
